@@ -1,6 +1,4 @@
-# vbg-guinee Platform Documentation
-
-## Overview
+# vbg-guinee 
 
 Cette plateforme permet de:
 - Collecter les déclarations de violences
@@ -13,28 +11,6 @@ Cette plateforme permet de:
 - **Frontend**: Flask
 - **Database**: PostgreSQL
 - **Containerization**: Docker & Docker Compose
-
-## Installation
-Instructions for installing the platform:
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/lansanacisse/vbg-guinee.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd vbg-guinee
-   ```
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-## Usage
-To start the development server, run:
-```bash
-npm start
-```
-Visit `http://localhost:3000` in your browser to view the application.
 
 ## Contributing
 We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to get involved.
