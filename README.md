@@ -1,40 +1,59 @@
-# vbg-guinee Platform Documentation
+# GBV Data Platform
+
+Plateforme de gestion et de reporting des violences basées sur le genre en Guinée.
 
 ## Overview
-The vbg-guinee platform is designed to provide a comprehensive suite of tools and services tailored for the Guinean community. This documentation outlines the project's structure, features, and usage guidelines.
 
-## Features
-- **User Management**: Allows users to register, log in, and manage their profiles.
-- **Resource Sharing**: Facilitates sharing of local resources and services.
-- **Community Engagement**: Provides forums and discussion boards for community interaction.
+Cette plateforme permet de:
+- Collecter les déclarations de violences
+- Générer des rapports statistiques
+- Visualiser les données de manière sécurisée
+
+## Stack Technologique
+
+- **Backend**: Django REST Framework
+- **Frontend**: Flask
+- **Database**: PostgreSQL
+- **Containerization**: Docker & Docker Compose
 
 ## Installation
-Instructions for installing the platform:
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/lansanacisse/vbg-guinee.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd vbg-guinee
-   ```
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
 
-## Usage
-To start the development server, run:
+### Prérequis
+- Docker & Docker Compose
+- Python 3.9+
+- PostgreSQL 12+
+
+### Démarrage rapide
+
 ```bash
-npm start
+# Cloner le repository
+git clone https://github.com/lansanacisse/vbg-guinee.git
+cd vbg-guinee
+
+# Configuration
+cp .env.example .env
+
+# Lancer les services
+docker-compose up -d
 ```
-Visit `http://localhost:3000` in your browser to view the application.
 
-## Contributing
-We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to get involved.
+## Structure du Projet
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+```
+gbv-data-platform/
+├── backend/          # API Django REST
+├── frontend/         # Interface Flask
+├── database/         # Schémas et données initiales
+├── docs/            # Documentation
+└── docker-compose.yml
+```
 
-## Contact
-For any questions or suggestions, please reach out to [lansanacisse](https://github.com/lansanacisse).
+## Documentation
+
+- [Architecture](docs/architecture.md)
+- [Sécurité](docs/security.md)
+- [API Reference](docs/api.md)
+
+## Licence
+
+Voir LICENSE pour plus de détails.
