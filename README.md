@@ -1,6 +1,4 @@
-# VBG Guinee
-
-Plateforme de gestion et de reporting des violences basées sur le genre en Guinée.
+# vbg-guinee Platform Documentation
 
 ## Overview
 
@@ -17,21 +15,32 @@ Cette plateforme permet de:
 - **Containerization**: Docker & Docker Compose
 
 ## Installation
+Instructions for installing the platform:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/lansanacisse/vbg-guinee.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd vbg-guinee
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-### Prérequis
-- Docker & Docker Compose
-- Python 3.9+
-- PostgreSQL 12+
-
-### Démarrage rapide
-
+## Usage
+To start the development server, run:
 ```bash
-# Cloner le repository
-git clone https://github.com/lansanacisse/vbg-guinee.git
-cd vbg-guinee
+npm start
+```
+Visit `http://localhost:3000` in your browser to view the application.
 
-# Configuration
-cp .env.example .env
+## Contributing
+We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to get involved.
 
-# Lancer les services
-docker-compose up -d
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+For any questions or suggestions, please reach out to [lansanacisse](https://github.com/lansanacisse).
