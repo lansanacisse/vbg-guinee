@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistiques - GBV Data Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">GBV Data Platform</h1>
+            <ul class="nav-menu">
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/form">Déclarer</a></li>
+                <li><a href="/stats">Statistiques</a></li>
+                <li><a href="/logout">Déconnexion</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h2>Tableaux de Bord Statistiques</h2>
+            
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total des Déclarations</h3>
+                    <p class="stat-value" id="totalReports">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Déclarations Soumises</h3>
+                    <p class="stat-value" id="submittedReports">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Déclarations Résolues</h3>
+                    <p class="stat-value" id="resolvedReports">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Moyenne d'Âge des Victimes</h3>
+                    <p class="stat-value" id="avgAge">0</p>
+                </div>
+            </section>
+
+            <section class="charts-section">
+                <div class="chart-container">
+                    <h3>Violences par Type</h3>
+                    <canvas id="violenceTypeChart"></canvas>
+                </div>
+
+                <div class="chart-container">
+                    <h3>Distribution par Genre</h3>
+                    <canvas id="genderChart"></canvas>
+                </div>
+            </section>
+
+            <section class="charts-section">
+                <div class="chart-container full-width">
+                    <h3>Violences par Lieu (Top 10)</h3>
+                    <canvas id="locationChart"></canvas>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 GBV Data Platform. Tous droits réservés.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/stats.js') }}"></script>
+</body>
+</html>

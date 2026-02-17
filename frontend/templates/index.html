@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GBV Data Platform - Accueil</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">GBV Data Platform</h1>
+            <ul class="nav-menu">
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/form">Déclarer</a></li>
+                <li><a href="/stats">Statistiques</a></li>
+                <li><a href="/logout">Déconnexion</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Plateforme de Gestion des Violences Basées sur le Genre</h2>
+                <p>Un espace sécurisé pour signaler les violences et accéder à des ressources d'aide</p>
+                <a href="/form" class="btn btn-primary">Faire une Déclaration</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="feature">
+                    <h3>Confidentialité</h3>
+                    <p>Vos données sont protégées et traitées de manière confidentielle</p>
+                </div>
+                <div class="feature">
+                    <h3>Soutien</h3>
+                    <p>Accès à des ressources d'aide et de soutien</p>
+                </div>
+                <div class="feature">
+                    <h3>Justice</h3>
+                    <p>Contribuer à la documentation des violences</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 GBV Data Platform. Tous droits réservés.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
