@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Déclarer une Violence - GBV Data Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">GBV Data Platform</h1>
+            <ul class="nav-menu">
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/form">Déclarer</a></li>
+                <li><a href="/stats">Statistiques</a></li>
+                <li><a href="/logout">Déconnexion</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h2>Formulaire de Déclaration</h2>
+            
+            <form id="reportForm" class="form">
+                <section class="form-section">
+                    <h3>Informations Personnelles</h3>
+                    
+                    <div class="form-group">
+                        <label for="victimName">Nom de la victime:</label>
+                        <input type="text" id="victimName" name="victim_name" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="victimAge">Âge:</label>
+                            <input type="number" id="victimAge" name="victim_age" min="0" max="120" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="victimGender">Genre:</label>
+                            <select id="victimGender" name="victim_gender" required>
+                                <option value="">-- Sélectionner --</option>
+                                <option value="female">Femme</option>
+                                <option value="male">Homme</option>
+                                <option value="other">Autre</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="victimPhone">Téléphone:</label>
+                            <input type="tel" id="victimPhone" name="victim_phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="victimEmail">Email:</label>
+                            <input type="email" id="victimEmail" name="victim_email">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="form-section">
+                    <h3>Détails de l'Incident</h3>
+                    
+                    <div class="form-group">
+                        <label for="violenceType">Type de Violence:</label>
+                        <select id="violenceType" name="violence_type" required>
+                            <option value="">-- Sélectionner --</option>
+                            <option value="physical">Violences Physiques</option>
+                            <option value="sexual">Violences Sexuelles</option>
+                            <option value="psychological">Violences Psychologiques</option>
+                            <option value="economic">Violences Économiques</option>
+                            <option value="social">Violences Sociales</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Description:</label>
+                        <textarea id="description" name="description" rows="5" required></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="location">Lieu de l'incident:</label>
+                            <input type="text" id="location" name="location" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="incidentDate">Date et Heure:</label>
+                            <input type="datetime-local" id="incidentDate" name="incident_date" required>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="form-section">
+                    <h3>Options de Confidentialité</h3>
+                    
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="anonymous" name="is_anonymous">
+                        <label for="anonymous">Signaler de manière anonyme</label>
+                    </div>
+
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="confidential" name="is_confidential" checked>
+                        <label for="confidential">Marquer comme confidentiel</label>
+                    </div>
+                </section>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Soumettre la Déclaration</button>
+                    <button type="reset" class="btn btn-secondary">Réinitialiser</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 GBV Data Platform. Tous droits réservés.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/form.js') }}"></script>
+</body>
+</html>
