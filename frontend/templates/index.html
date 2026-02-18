@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GBV Data Platform - Accueil</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>VBG Guinée - Accueil</title>
 </head>
 <body>
     <nav class="navbar">
         <div class="container">
-            <h1 class="logo">GBV Data Platform</h1>
             <ul class="nav-menu">
                 <li><a href="/">Accueil</a></li>
                 <li><a href="/form">Déclarer</a></li>
                 <li><a href="/stats">Statistiques</a></li>
-                <li><a href="/logout">Déconnexion</a></li>
+                <li><a href="/profil">Profil</a></li>
+                <li><a href="/why">Pourquoi?</a></li>
             </ul>
         </div>
     </nav>
@@ -22,32 +21,32 @@
     <main>
         <section class="hero">
             <div class="container">
-                <h2>Plateforme de Gestion des Violences Basées sur le Genre</h2>
-                <p>Un espace sécurisé pour signaler les violences et accéder à des ressources d'aide</p>
-                <a href="/form" class="btn btn-primary">Faire une Déclaration</a>
+                <p>En Guinée, les Violences Basées sur le Genre (VBG) ne sont pas des faits divers, mais un défi de santé publique et de droits humains. 
+                    Qu'il s'agisse de violences physiques, de mariages précoces, de mutilations génitales féminines (MGF) ou de harcèlement, ces actes freinent le développement de notre nation et brisent des milliers de vies chaque année.
+                    Malgré les efforts constants des autorités et de la société civile, une barrière invisible persiste : <span style="color: red; font-weight: bold;">le silence</span>
+                </p>
+                <p>
+                    Notre plateforme de recensement n'est pas qu'un outil statistique. C'est un espace sécurisé où chaque signalement devient une preuve de la nécessité d'agir.
+                </p>
+                <blockquote>
+                    « Collecter une donnée, c'est reconnaître qu'une victime existe. Analyser ces données, c'est construire le chemin vers sa protection. »
+                </blockquote>
+
+                <p>
+                    Que vous soyez une victime, un témoin ou un acteur de la société civile, votre contribution est la clé. 
+                    Chaque clic sur cette plateforme contribue à dresser un portrait fidèle de la situation en Guinée pour que plus jamais une femme ne se sente seule face à la violence.
+                </p>
+
+                <p> Vous êtes victime ?
+                    <a href="/form" class="btn btn-primary">Faites une déclaration</a>
+                </p>
             </div>
         </section>
 
-        <section class="features">
-            <div class="container">
-                <div class="feature">
-                    <h3>Confidentialité</h3>
-                    <p>Vos données sont protégées et traitées de manière confidentielle</p>
-                </div>
-                <div class="feature">
-                    <h3>Soutien</h3>
-                    <p>Accès à des ressources d'aide et de soutien</p>
-                </div>
-                <div class="feature">
-                    <h3>Justice</h3>
-                    <p>Contribuer à la documentation des violences</p>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 GBV Data Platform. Tous droits réservés.</p>
+        <p>&copy; 2026 VBG Guinée. Tous droits réservés.</p>
     </footer>
 
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
