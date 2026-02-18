@@ -1,6 +1,3 @@
-"""
-Flask application for GBV Data Platform
-"""
 import os
 from flask import Flask, render_template, request, jsonify, session
 from flask_cors import CORS
@@ -33,6 +30,15 @@ def stats():
     """Statistics page"""
     return render_template('stats.html')
 
+@app.route('/profil')
+def profil():
+    "Connexion option for association"
+    return render_template('profil.html')
+
+@app.route('/who')
+def why():
+    "Who we are"
+    return render_template('why.html')
 
 @app.route('/api/reports', methods=['GET'])
 def get_reports():
