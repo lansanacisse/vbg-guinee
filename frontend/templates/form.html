@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Déclarer une Violence - GBV Data Platform</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Déclarer une Violence</title>
 </head>
 <body>
     <nav class="navbar">
@@ -28,8 +27,13 @@
                     <h3>Informations Personnelles</h3>
                     
                     <div class="form-group">
-                        <label for="victimName">Nom de la victime:</label>
-                        <input type="text" id="victimName" name="victim_name" required>
+                        <label for="victimLastName">Nom:</label>
+                        <input type="text" id="victimLastName" name="victim_last_name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="victimFirstName">Prénom:</label>
+                        <input type="text" id="victimFirstName" name="victim_first_name" required>
                     </div>
 
                     <div class="form-row">
