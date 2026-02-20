@@ -4,15 +4,17 @@ __pycache__/
 *.pyo
 *.pyd
 
-# Django
+# Logs et base de données
 *.log
 *.pot
 *.pyc
 *.sqlite3
-*
-__init__.py
-*.migrations/
-*.ds_store
+
+# Migrations
+migrations/
+
+# Système
+.DS_Store
 
 # Environment
 .env
